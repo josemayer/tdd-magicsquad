@@ -1,10 +1,16 @@
 def magicSquare(square):
     if len(square) < 1:
         raise EmptySquare('A empty square matrix is given')
+    
+    constantSum = 0
+    for element in square[0]:
+        constantSum += element
 
-    value = square[0][0]
     for line in square:
+        sum = 0
         for element in line:
-            if element != value:
-                return False
-    return True;
+            sum += element
+
+        if sum != constantSum:
+            return False
+    return True
