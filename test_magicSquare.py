@@ -9,8 +9,13 @@ class Test(unittest.TestCase):
         self.squareSingleValue = [[1, 1, 1],
                                   [1, 1, 1],
                                   [1, 1, 1]]
+        self.squareAllDiffValid = [[8, 1, 6],
+                                   [3, 5, 7],
+                                   [4, 9, 2]]
 
     def test_magicSquare_allDiff(self):
         self.assertEqual(magicSquare(self.squareAllDiff), False)
     def test_magicSquare_singleValue(self):
         self.assertEqual(magicSquare(self.squareSingleValue), True)
+    def test_magicSquare_sumColumnsValid(self):
+        self.assertEqual(magicSquare(self.squareAllDiffValid), True)
