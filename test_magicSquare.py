@@ -8,4 +8,4 @@ class Test(unittest.TestCase):
                         [7, 8, 9]]
 
     def test_magicSquare(self):
-        self.assertEquals(magicSquare(self.square1), False)
+        self.assertEqual(magicSquare(self.square1), False)
