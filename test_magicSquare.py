@@ -12,6 +12,9 @@ class Test(unittest.TestCase):
         self.squareAllDiffValid = [[8, 1, 6],
                                    [3, 5, 7],
                                    [4, 9, 2]]
+        self.squareOnlyLinesSumValid = [[1, 2, 3],
+                                        [1, 2, 3],
+                                        [1, 2, 3]]
 
     def test_magicSquare_allDiff(self):
         self.assertEqual(magicSquare(self.squareAllDiff), False)
@@ -19,3 +22,5 @@ class Test(unittest.TestCase):
         self.assertEqual(magicSquare(self.squareSingleValue), True)
     def test_magicSquare_sumLinesValid(self):
         self.assertEqual(magicSquare(self.squareAllDiffValid), True)
+    def test_magicSquare_onlySumLinesValid(self):
+        self.assertEqual(magicSquare(self.squareOnlyLinesSumValid), False)
