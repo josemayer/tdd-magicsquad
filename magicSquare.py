@@ -1,7 +1,10 @@
 def magicSquare(square):
     if len(square) < 1:
         raise EmptySquare('A empty square matrix is given')
-    
+    for line in square:
+        if len(line) != len(square):
+            raise NotSquareMatrix('The matrixis not square.')
+
     constantSum = 0
     for element in square[0]:
         constantSum += element
