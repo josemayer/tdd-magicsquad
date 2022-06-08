@@ -6,11 +6,22 @@ def magicSquare(square):
     for element in square[0]:
         constantSum += element
 
-    for line in square:
+    # Verify if line-sum is equal to a constant value
+    for i in range(len(square)):
         sum = 0
-        for element in line:
-            sum += element
+        for j in range(len(square)):
+            sum += square[i][j]
 
         if sum != constantSum:
             return False
+
+    # Verify if column-sum is equal to a constant value
+    for j in range(len(square)):
+        sum = 0
+        for i in range(len(square)):
+            sum += square[i][j]
+        
+        if sum != constantSum:
+            return False
+
     return True
