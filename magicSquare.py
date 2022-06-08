@@ -24,4 +24,20 @@ def magicSquare(square):
         if sum != constantSum:
             return False
 
+    # Verify if main diagonal sum is equal to a constant value
+    sum = 0
+    for i in range(len(square)):
+        sum += square[i][i]
+
+    if sum != constantSum:
+        return False
+
+    # Verify if secondary diagonal sum is equal to a constant value
+    sum = 0
+    for i in range(len(square)):
+        sum += square[i][(len(square) - 1) - i]
+
+    if sum != constantSum:
+        return False
+
     return True
