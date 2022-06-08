@@ -2,6 +2,7 @@
 A magic square is a square matrix that has his column sums, lines sums and both diagonals sums equivalent to a constant number. The example matrix given below is a magic square, with all sums equals to 15.
 
 | 8 | 1 | 6 |
+|:-:|:-:|---|
 | 3 | 5 | 7 |
 | 4 | 9 | 2 |
 
