@@ -17,5 +17,5 @@ class Test(unittest.TestCase):
         self.assertEqual(magicSquare(self.squareAllDiff), False)
     def test_magicSquare_singleValue(self):
         self.assertEqual(magicSquare(self.squareSingleValue), True)
-    def test_magicSquare_sumColumnsValid(self):
+    def test_magicSquare_sumLinesValid(self):
         self.assertEqual(magicSquare(self.squareAllDiffValid), True)
